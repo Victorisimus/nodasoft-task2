@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400&display=swap);
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 53px;
+  line-height: 1.17;
+}
+.wraper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #c0dbd9;
+  padding: 0 15px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.main {
+  flex: 1 1 auto;
+}
+.header {
+  background-color: #7faff7;
+  padding: 0 30px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header__popup {
+  display: inline-block;
+  background-color: #a5c7f9;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px 8px;
+}
+
+.counter {
+  counter-reset: section;
+  background-color: #b3f95a;
+  display: flex;
+  column-gap: 1.28%;
+  row-gap: 15px;
+  flex-wrap: wrap;
+}
+.counter__item {
+  position: relative;
+  background-color: #8ad191;
+  height: 198px;
+}
+.counter__item_1 {
+  flex: 0 1 33.333%;
+}
+.counter__item_2 {
+  flex: 0 1 50.427%;
+}
+.counter__item_3 {
+  flex: 0 1 13.675%;
+}
+.counter__item_4 {
+  flex: 0 1 85.043%;
+}
+.counter__item_5 {
+  flex: 0 1 13.675%;
+}
+.counter__item::before {
+  counter-increment: section;
+  content: counter(section);
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery {
+  background-color: #88b5bf;
+  padding: 30px;
+  display: flex;
+  /* gap: 30px; */
+}
+.gallery__item {
+  background-color: #0d89b0;
+  width: 50%; /* 1:1 Aspect Ratio */
+  position: relative;
+}
+.gallery__item:not(:last-child) {
+  margin-right: 2.56%;
+}
+.gallery__item::before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+}
+
+.footer {
+  min-height: 100px;
+  background-color: #7faff6;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0.3s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__content {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.popup__close {
+  position: absolute;
+  width: 43px;
+  height: 39px;
+  top: 15px;
+  right: 15px;
+  background-color: #7faff6;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__title {
+}
